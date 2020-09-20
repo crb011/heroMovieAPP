@@ -1,0 +1,263 @@
+/* 内容部分 */
+/* 首页 */
+/* 热门超英 */
+#app{
+    background-color: #f6f6f6;
+}
+.hotMoive{
+    background-color: #fff;
+}
+.mTitle{
+    font-size: 0.4rem;
+}
+.mTitle .iconfont{
+    vertical-align: 2px;
+}
+.hotMoiveView{
+    margin-left: 0.2rem;
+}
+.hotMoiveList{
+    display: flex;
+    overflow-x: auto;
+}
+.hotMoiveList>li{
+     flex:1;
+     width: 2rem;
+     margin-right: 0.2rem;
+     padding-bottom: 0.2rem;
+}
+.hotMoiveList>li img{
+    width:2rem;
+    height: 2.7rem;
+    display: block;
+    overflow: hidden;
+}
+.hotMoiveList>li h5{
+    margin-top: 0.1rem;
+    font-size: 0.26rem;
+}
+/* 热门预告 */
+.previewMoiveList{
+    display: flex; 
+    padding: 0 0.2rem;
+}
+.previewMoiveList>li{
+    flex: 1;
+    width: 3.5rem;
+    height: 2.2rem;
+}
+.previewMoiveList>li:first-child{
+    margin-right: 0.1rem;
+}
+.previewMoiveList .moiveBox{
+    height: 2.2rem;
+}
+/* 猜你喜欢 */
+.guessUlikeList>li{
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: nowrap;
+}
+.uMovieImg{
+    width:1.8rem;
+}
+.uMovieImg img{
+    width: 1.8rem;
+    height: 2.4rem;
+    border-radius: 0.1rem;
+    display: block;
+}
+.uMoiveDesc{
+    width: 3.6rem;
+}
+.uMoiveDesc h5{
+    font-size: 0.4rem;
+    font-weight: 400;
+    margin-bottom: 0.06rem;
+}
+.uMoiveDesc p{
+    margin-top: 0.1rem;
+    font-size: 0.28rem;
+    color: #999;
+}
+.uMovieZan{
+    width: 1.2rem;
+    border-left: 0.04rem dashed #ddd;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.uMovieZan span{
+    width: 0.5rem;
+    height: 0.5rem;
+    /* 让子元素的内容居中 */
+    align-self: center;
+}
+.uMovieZan span:first-child{
+    font-size: 0.4rem;
+    padding-left: 0.1rem;
+}
+.uMovieZan span:last-child{
+    font-size: 0.28rem;
+    color: #feab2a;
+    word-break: keep-all;
+}
+/* 电影遮罩层 */
+.moiveBox{
+    width: 100%;
+    height: 4.4rem;
+    overflow: hidden;
+    
+}
+.moiveBox video{
+    width: 100%;
+    height: 100%;
+    background-color:#000;
+    cursor: pointer;
+}
+.moiveBox .mask{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    color: #fff;
+    display: flex;
+    /* 两个子元素从左右并列变上下并列 */
+    flex-direction: column;
+    /* 水平居中 */
+    justify-content: center;
+    /* 垂直居中 */
+    align-items: center;
+    font-size:.3rem;
+    background-color:rgba(0, 0, 0, 0.5);
+    overflow: hidden;
+}
+.moiveBox .mask p:first-child {
+    font-size: 0.5rem;
+}
+/* 电影详情页 */
+.moiveInfoBox{
+    display: flex;
+    justify-content: space-between;
+}
+.moiveCover{
+    width: 2.8rem;
+    flex-shrink: 0;
+}
+.moiveInfo{
+    width: 4rem;
+    flex-shrink: 0;
+}
+.moiveInfo>h4{
+    font-size: 0.6rem;
+    font-weight: 400;
+    line-height: 1.3;
+}
+.moiveInfo>p{
+    font-size: 0.26rem;
+    color: #999;
+}
+.scoreBox{
+    display: flex;
+    flex-direction: column;
+    background-color: #fff;
+    padding: 0.2rem;
+    box-shadow: 2px 2px 5px #eee;
+}
+.scoreBox>h5{
+    font-size: 0.28rem;
+    font-weight: 400;
+}
+.scoreInfo{
+    display: flex;
+    justify-content: space-around;
+}
+.scoreInfo>strong{
+    font-size: 0.42rem;
+}
+/* 电影详情-剧情介绍 */
+.plotPics{
+    padding: 0 0.2rem;
+}
+.plotDesc>h4{
+    border-top: 0.02rem solid #ddd;
+    padding: 0.2rem;
+    font-weight: 400;
+    font-size: 0.32rem;
+}
+.plotDesc>p{
+    padding:0 0.2rem;
+    font-weight: 400;
+    font-size: 0.32rem; 
+    text-align: justify;
+}
+.plotPics>h4{
+    padding: 0.2rem;
+    font-weight: 400;
+    font-size: 0.32rem;
+}
+.plotImg{
+    display: flex;
+    overflow-x: auto;
+}
+.plotImg>li{
+    width: 2.2rem;
+    position: relative;
+    flex-shrink: 0;
+    margin-left: 0.1rem;
+    overflow: hidden;
+    
+}
+.plotImg>li>div{
+    height: 3.2rem;
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+.plotImg img{
+    display: block;
+    width: 100%;
+    position: absolute;
+    left: 0;
+    top: 0;
+    opacity: 0;
+    
+}
+/* 导航 */
+.fixedTop{
+    height: 1rem;
+}
+.navList {
+    display: flex;
+    padding: 0.05rem 0;
+    border-top: 1px solid #ddd;
+    background-color: #f2f2f2;
+    position: fixed;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 99
+
+}
+.navList li {
+    flex-grow: 1;
+    text-align: center
+}
+.navList li i,.navList li span{
+    display: block;
+}
+.navList li .iconfont{
+    font-size: 0.4rem;
+    height: 0.42rem;
+    line-height: 0.42rem;
+}
+.navList li a{
+    font-size: 0.26rem;
+    color: #333
+}
+.navList li.cur a{
+    color: #4397fe
+}
